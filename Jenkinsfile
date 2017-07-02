@@ -23,7 +23,9 @@ node {
         sh '''
         cd ${WORKSPACE}
         pwd
+        source bin/activate
         ls -la 
+        deactivate
         '''
     }
 }   
