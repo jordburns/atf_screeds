@@ -1,6 +1,6 @@
 node {
 
-def wspace = pwd()
+    def workspace = env.WORKSPACE
 
     stage("Install Pre-requesites") {
         sh 'sudo apt-get install python-pip -y'
@@ -22,7 +22,7 @@ def wspace = pwd()
 
     stage ("Install Application Dependencies") {
         sh '''
-        source $wspace/bin/activate
+        source ${workspace}/bin/activate
         deactivate
         '''
     }
