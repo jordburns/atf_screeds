@@ -24,6 +24,7 @@ node {
         echo "${workspace}"
         sh '''
         cd ${workspace}
+        pwd
         ls -la 
         '''
     }
