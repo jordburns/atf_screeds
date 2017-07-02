@@ -7,6 +7,7 @@ node {
             sh 'sudo pip install --upgrade pip'
             sh 'sudo -H pip install virtualenv'
        }
+    }
        stage ("Get Latest Code") {
         checkout scm
         }
@@ -14,4 +15,4 @@ node {
             sh 'virtualenv --no-site-packages .'
         }
     }   
-}
+
