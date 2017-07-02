@@ -19,8 +19,6 @@ def wspace = pwd()
             sh 'virtualenv --no-site-packages .'
         }
     }  
-    
-    def wspace = pwd()
 
     stage ("Install Application Dependencies") {
         sh '''
