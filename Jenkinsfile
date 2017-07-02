@@ -1,7 +1,5 @@
 node {
 
-    def workspace = env.WORKSPACE
-
     stage("Install Pre-requesites") {
         sh 'sudo apt-get install python-pip -y'
         sh 'sudo pip install --upgrade pip'
@@ -23,7 +21,7 @@ node {
     stage ("Install Application Dependencies") {
         echo "${workspace}"
         sh '''
-        cd ${workspace}
+        cd ${env.workspace}
         pwd
         ls -la 
         '''
