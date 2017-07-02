@@ -22,7 +22,7 @@ def wspace = pwd()
 
     stage ("Install Application Dependencies") {
         sh '''
-        source $(wspace)/bin/activate
+        source $wspace/bin/activate
         deactivate
         '''
     }
