@@ -19,11 +19,7 @@ def wspace = pwd()
 
     stage ("Install Application Dependencies") {
         dir(wspace) {
-            sh '''
-                source bin/activate
-                pip install -r requirements.txt
-                deactivate
-            '''
+            sh 'source bin/activate'
         }
     }
 }   
