@@ -20,7 +20,7 @@ node {
 
     stage ("Install Application Dependencies") {
         sh '''
-        . bin/activate
+        . ${WORKSPACE}/bin/activate
         pip freeze
         deactivate
         '''
