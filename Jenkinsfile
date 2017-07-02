@@ -19,7 +19,7 @@ def wspace = pwd()
 
     stage ("Install Application Dependencies") {
         dir(wspace) {
-            sh 'source ./bin/activate'
+            sh 'sudo source ./bin/activate'
         }
     }
 }   
