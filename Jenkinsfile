@@ -19,9 +19,9 @@ node {
     }  
 
     stage ("Install Application Dependencies") {
-        echo "${workspace}"
+        echo "${WORKSPACE}"
         sh '''
-        cd ${env.workspace}
+        cd ${WORKSPACE}
         pwd
         ls -la 
         '''
