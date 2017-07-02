@@ -7,6 +7,9 @@ node {
             sh 'sudo pip install --upgrade pip'
             sh 'sudo -H pip install virtualenv'
        }
+       stage ("Get Latest Code") {
+        checkout scm
+        }
         stage("Install Python Virtual Enviroment") {
             sh 'virtualenv --no-site-packages .'
         }
