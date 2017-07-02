@@ -23,8 +23,8 @@ node {
     stage ("Install Application Dependencies") {
         echo "${workspace}"
         sh '''
-        source ${workspace}/bin/activate
-        deactivate
+        cd ${workspace}
+        ls -la 
         '''
     }
 }   
