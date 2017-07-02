@@ -18,10 +18,14 @@ def wspace = pwd()
         stage("Install Python Virtual Enviroment") {
             sh 'virtualenv --no-site-packages .'
         }
-    }
-
+    }  
+    
+    def wspace = pwd()
 
     stage ("Install Application Dependencies") {
-        sh 'source ./bin/activate'
+        sh '''
+        cd $(wspace)
+        source bin/activate
+        '''
     }
 }   
