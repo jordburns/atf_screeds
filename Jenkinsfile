@@ -21,7 +21,6 @@ node {
     stage ("Install Application Dependencies") {
         sh '''
         . bin/activate
-        pip install -r requirements.txt
         pip freeze
         deactivate
         '''
