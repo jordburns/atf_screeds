@@ -21,7 +21,12 @@ node {
     stage ("Install Application Dependencies") {
         sh '''
         . bin/activate
-        ls -la 
+        pip install -r requirements.txt
+        deactivate
         '''
+    }
+
+    stage ("Migrate") {
+        sh 'python manage.py migrate'
     }
 }   
