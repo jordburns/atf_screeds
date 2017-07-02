@@ -20,6 +20,7 @@ node {
 
     stage ("Install Application Dependencies") {
         sh '''
+        . bin/activate
         ls -la 
         '''
     }
