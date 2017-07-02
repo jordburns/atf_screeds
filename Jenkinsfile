@@ -24,6 +24,7 @@ def wspace = pwd()
         sh '''
         cd $(wspace)
         source bin/activate
+        deactivate
         '''
     }
 }   
