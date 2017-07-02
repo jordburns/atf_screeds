@@ -19,13 +19,8 @@ node {
     }  
 
     stage ("Install Application Dependencies") {
-        echo "${WORKSPACE}"
         sh '''
-        cd ${WORKSPACE}
-        pwd
-        source ${WORKSPACE}/bin/activate
         ls -la 
-        deactivate
         '''
     }
 }   
