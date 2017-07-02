@@ -16,8 +16,8 @@ node {
 
 
     stage ("Install Application Dependencies") {
-
-    ws() {
+    wspace = "/var/lib/jenkins/workspace/atf_pipeline/"
+    ws(wspace) {
         sh '''
             source bin/activate
             pip install -r requirements.txt
