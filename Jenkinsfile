@@ -16,10 +16,13 @@ node {
 
 
     stage ("Install Application Dependencies") {
-    sh '''
-        source bin/activate
-        pip install -r requirements.txt
-        deactivate
-       '''
+
+    ws() {
+        sh '''
+            source bin/activate
+            pip install -r requirements.txt
+            deactivate
+           '''
+        }
     }
 }   
